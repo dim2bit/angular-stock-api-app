@@ -1,0 +1,17 @@
+<div>{{ getSecondsAfterUpdate() | number : '1.0-1' }} seconds have passed after update</div>
+<table>
+    <tr>
+      <th>Company name</th>
+      <th>Position name</th>
+      <th>Price before update</th>
+      <th>Price after update</th>
+      <th>Change of price</th>
+    </tr>
+    <tr *ngFor="let column of getTableData()">
+      <td>{{ column[0] }}</td>
+      <td>{{ column[1] }}</td>
+      <td>{{ column[2] }}</td>
+      <td>{{ column[3] }}</td>
+      <td>{{ column[4] | number : '1.0-3' }}</td>
+    </tr>
+</table>
